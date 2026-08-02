@@ -1,0 +1,68 @@
+generated: '2026-08-02'
+method: probed
+source: live HTTPS probes of the VuMedi web hosts
+note: >-
+  Every RFC 8615 /.well-known/ discovery path probed on the VuMedi hosts returned
+  404. No security.txt, no OIDC/OAuth discovery document, no API catalog and no
+  ai-plugin manifest is published. Recorded as evidence of absence, not as a
+  discovery surface — no WellKnown or SecurityTxt pointer is wired in apis.yml
+  because no document was found.
+hosts:
+- host: https://www.vumedi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://vumedi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.vumedi.com
+  resolves: false
+  documents: []
+- host: https://developer.vumedi.com
+  resolves: false
+  documents: []
+- host: https://docs.vumedi.com
+  resolves: false
+  documents: []
+other_documents:
+- path: /robots.txt
+  status: 200
+  file: vumedi-robots.txt
+  note: >-
+    Saved verbatim. VuMedi explicitly Disallows every major AI/agent crawler —
+    GPTBot, ClaudeBot, PerplexityBot, CCBot, Google-Extended, Applebot-Extended,
+    Meta-ExternalAgent, Bytespider, Amazonbot, AI2Bot, Youbot, YisouSpider — from
+    the entire site. This is a deliberate closed posture toward automated and
+    agentic consumption and is the single most consequential machine-readable
+    signal VuMedi publishes.
+- path: /sitemap.xml
+  status: 200
+  note: >-
+    Sitemap index covering videos (4 shards), webinars, channels, PDFs, events and
+    flatpages. The only structured, machine-readable inventory of VuMedi content
+    that is published; it is a crawl surface, not an API.

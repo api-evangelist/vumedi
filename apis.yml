@@ -1,8 +1,20 @@
 aid: vumedi
 name: VuMedi
-description: 'VuMedi is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'VuMedi (Vumedi, Inc.) operates a video education platform for physicians
+  and other healthcare professionals. Founded in 2008 and headquartered in Oakland,
+  California, with offices in Saint Louis Park, Minnesota and Zagreb, Croatia, the
+  platform aggregates a library of long-form educational videos, webinars, conference
+  coverage and case discussions contributed by key opinion leaders and academic medical
+  centers across more than twenty-five clinical specialties. Physicians use it to
+  watch surgical technique videos, follow live and on-demand webinars, discuss cases
+  with peers and presenters, and stay current on clinical evidence. The company monetizes
+  through industry partnerships with pharmaceutical and medical-device brands rather
+  than a subscription paywall. As of August 2026 VuMedi publishes no public developer
+  program, API documentation, machine-readable API contract, SDKs or MCP server; its
+  public surface is the consumer web application, an iOS app, and a set of static
+  marketing and policy pages.'
 url: https://raw.githubusercontent.com/api-evangelist/vumedi/refs/heads/main/apis.yml
+image: https://static.vumedi.com/gfx/favicons/android-icon-192x192.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +24,13 @@ created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Healthcare
+- Medical Education
+- Continuing Medical Education
+- Video
+- Physicians
+- Life Sciences
+- Content Platform
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,44 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/vumedi-domain-security.yml
+- type: Conformance
+  url: conformance/vumedi-conformance.yml
+- type: LLMsTxt
+  url: llms/vumedi-llms.txt
 - type: Website
+  url: https://www.vumedi.com/
+- type: About
+  url: https://www.vumedi.com/public/pages/about/
+- type: SignUp
+  url: https://www.vumedi.com/accounts/register/
+- type: Login
+  url: https://www.vumedi.com/accounts/login/
+- type: Support
+  url: https://www.vumedi.com/public/pages/contact/
+- type: FAQ
+  url: https://www.vumedi.com/public/pages/faq/
+- type: TermsOfService
+  url: https://www.vumedi.com/public/pages/tos/
+- type: PrivacyPolicy
+  url: https://www.vumedi.com/public/pages/privacy/
+- type: Partners
+  url: https://www.vumedi.com/public/pages/partnering/
+- type: Careers
+  url: https://www.vumedi.com/public/pages/jobs/
+- type: GitHubOrganization
+  url: https://github.com/VuMedi
+- type: LinkedIn
+  url: https://www.linkedin.com/company/vumedi-inc
+- type: Twitter
+  url: https://twitter.com/vumedi
+- type: iOSApp
+  url: https://apps.apple.com/us/app/vumedi/id1074275721
+- type: StockProfile
   url: https://forgeglobal.com/vumedi_stock/
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
