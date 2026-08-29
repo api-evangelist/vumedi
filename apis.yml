@@ -14,6 +14,17 @@ description: 'VuMedi (Vumedi, Inc.) operates a video education platform for phys
   public surface is the consumer web application, an iOS app, and a set of static
   marketing and policy pages.'
 url: https://raw.githubusercontent.com/api-evangelist/vumedi/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://static.vumedi.com/gfx/favicons/android-icon-192x192.png
 x-type: company
 x-source: harvest:secondary-market
